@@ -1,0 +1,92 @@
+https://chat.deepseek.com/
+
+At one college, the tuition for a full-time student is $8,000 per semester. It has been announced that the tuition will increase by 3 percent each year for the next 5 years. Write a program with a loop that displays the projected semester tuition amount for the next 5 years. First, use top-down design - start with a sample run with test input and output. Next, start planning and identify the variables (data) you will need. Write the steps of your logic (algorithm). Write Python code.
+Let’s break this problem down step by step using top-down design and then implement the solution in Python.
+
+Sample Run (Test Input and Output)
+Input:
+
+Current tuition: $8,000 per semester
+
+Annual increase: 3%
+
+Number of years: 5
+
+Output:
+
+Copy
+Year 1: $8240.00
+Year 2: $8487.20
+Year 3: $8741.82
+Year 4: $9004.07
+Year 5: $9274.19
+Planning and Variables
+Variables Needed:
+
+current_tuition: The current tuition amount ($8,000).
+
+increase_rate: The annual increase rate (3% or 0.03).
+
+years: The number of years to project (5).
+
+year: A counter for the loop to track the current year.
+
+Steps (Algorithm):
+
+Initialize current_tuition to 8000.
+
+Initialize increase_rate to 0.03.
+
+Loop through each year from 1 to 5:
+
+Calculate the new tuition by multiplying current_tuition by (1 + increase_rate).
+
+Update current_tuition to the new value.
+
+Display the projected tuition for the current year.
+
+Python Code
+Here’s the Python program implementing the logic:
+
+python
+Copy
+# Initialize variables
+current_tuition = 8000  # Starting tuition
+increase_rate = 0.03    # 3% annual increase
+years = 5               # Number of years to project
+
+# Loop through each year
+for year in range(1, years + 1):
+    # Calculate the new tuition
+    current_tuition *= (1 + increase_rate)
+    # Display the projected tuition for the current year
+    print(f"Year {year}: ${current_tuition:.2f}")
+Explanation of the Code
+Initialization:
+
+current_tuition is set to 8000 (the starting tuition).
+
+increase_rate is set to 0.03 (3% annual increase).
+
+years is set to 5 (number of years to project).
+
+Loop:
+
+The for loop runs from 1 to 5 (inclusive) using range(1, years + 1).
+
+Inside the loop:
+
+current_tuition is updated by multiplying it by (1 + increase_rate) to account for the 3% increase.
+
+The result is printed with 2 decimal places using an f-string (:.2f).
+
+Output
+When you run the program, the output will be:
+
+Copy
+Year 1: $8240.00
+Year 2: $8487.20
+Year 3: $8741.82
+Year 4: $9004.07
+Year 5: $9274.19
+This program calculates and displays the projected tuition for the next 5 years with a 3% annual increase. Let me know if you have further questions! 😊
